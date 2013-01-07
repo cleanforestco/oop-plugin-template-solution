@@ -18,7 +18,7 @@ if [[ $1 == "-h" || $1 == "--help" ]] ; then
 	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "License: http://www.gnu.org/licenses/gpl-2.0.html"
-	echo "http://wordpress.org/extend/plugins/oop-plugin-template-solution/"
+	echo "http://wordpress.org/extend/plugins/cfs-plugin/"
 	exit 1
 fi
 
@@ -26,5 +26,5 @@ cd "`dirname "$0"`"
 
 while read file ; do
 	echo "Merging $file..."
-	msgmerge -vUN --backup=off $file oop-plugin-template-solution.pot
+	msgmerge -vUN --backup=off $file cfs-plugin.pot
 done < <(ls *po)

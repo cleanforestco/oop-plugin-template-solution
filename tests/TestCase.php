@@ -4,7 +4,7 @@
  * Parent TestCase class containing common methods and properties, plus an
  * override for the wp_mail() and wp_redirect() functions
  *
- * @package oop-plugin-template-solution
+ * @package cfs-plugin
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
@@ -92,7 +92,7 @@ require_once 'PHPUnit/Autoload.php';
 /**
  * Parent TestCase class containing common methods and properties
  *
- * @package oop-plugin-template-solution
+ * @package cfs-plugin
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
@@ -101,7 +101,7 @@ require_once 'PHPUnit/Autoload.php';
  * REPLACE_PLUGIN_URI
  */
 abstract class TestCase extends PHPUnit_Framework_TestCase {
-	const ID = 'oop-plugin-template-solution';
+	const ID = 'cfs-plugin';
 
 
 	/**

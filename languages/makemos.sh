@@ -13,7 +13,7 @@ if [[ $1 == "-h" || $1 == "--help" ]] ; then
 	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "License: http://www.gnu.org/licenses/gpl-2.0.html"
-	echo "http://wordpress.org/extend/plugins/oop-plugin-template-solution/"
+	echo "http://wordpress.org/extend/plugins/cfs-plugin/"
 	exit 1
 fi
 

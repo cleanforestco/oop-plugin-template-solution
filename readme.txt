@@ -1,4 +1,4 @@
-=== Object Oriented Plugin Template Solution ===
+=== CFS Plugin ===
 Contributors: convissor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=danielc%40analysisandsolutions%2ecom&lc=US&item_name=Donate%3a%20Object%20Oriented%20Plugin%20Template%20Solution&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: plugin, template, skeleton, object oriented, settings api, multisite, i18n, translation, phpunit
@@ -28,14 +28,14 @@ for transplantation into their own projects.
 See the FAQ section for more details about this plugin's features.
 
 Development of this plugin template happens on
-[GitHub](https://github.com/convissor/oop-plugin-template-solution).
+[GitHub](https://github.com/convissor/cfs-plugin).
 Please submit
-[bug and feature requests](https://github.com/convissor/oop-plugin-template-solution/issues),
-[pull requests](https://github.com/convissor/oop-plugin-template-solution/pulls),
-[wiki entries](https://github.com/convissor/oop-plugin-template-solution/wiki)
+[bug and feature requests](https://github.com/convissor/cfs-plugin/issues),
+[pull requests](https://github.com/convissor/cfs-plugin/pulls),
+[wiki entries](https://github.com/convissor/cfs-plugin/wiki)
 there.
 Releases are then squashed and pushed to WordPress'
-[Plugins SVN repository](http://plugins.svn.wordpress.org/oop-plugin-template-solution/).
+[Plugins SVN repository](http://plugins.svn.wordpress.org/cfs-plugin/).
 This division is necessary due having being chastised that "the Plugins SVN
 repository is a release system, not a development system."
 
@@ -53,7 +53,7 @@ If you want an explanation of how this "plugin" works, please see the
 == Installation ==
 
 1. Download the zip file from WordPress' plugin
-    site: `http://wordpress.org/extend/plugins/oop-plugin-template-solution/`
+    site: `http://wordpress.org/extend/plugins/cfs-plugin/`
 
 1. Unzip the file
 
@@ -64,15 +64,15 @@ If you want an explanation of how this "plugin" works, please see the
 
         # Settings -----
         # Plugin identifier / directory (hyphen separated).
-        old_id=oop-plugin-template-solution
+        old_id=cfs-plugin
         new_id=my-plugin
 
         # Class name (underscore separated).
-        old_class=oop_plugin_template_solution
+        old_class=cfsplugin
         new_class=my_plugin
 
         # Plugin Name (space separated).
-        old_name="Object Oriented Plugin Template Solution"
+        old_name="CFS Plugin"
         new_name="My Plugin"
         # --------------
 
@@ -87,7 +87,7 @@ If you want an explanation of how this "plugin" works, please see the
         find . -type f -exec sed "s/$old_class/$new_class/g" -i {} \;
         find . -type f -exec sed "s/$old_name/$new_name/g" -i {} \;
         find . -type f -exec sed -E "s/^ \* (Author:|Author URI:|@author|@copyright) (.*)$/ * \1/g" -i {} \;
-        find . -type f -exec sed "s@REPLACE_PLUGIN_URI@http://wordpress.org/extend/plugins/oop-plugin-template-solution/@g" -i {} \;
+        find . -type f -exec sed "s@REPLACE_PLUGIN_URI@http://wordpress.org/extend/plugins/cfs-plugin/@g" -i {} \;
         sed -E "s/^(Contributors|Donate link|Tags): (.*)$/\1:/g" -i readme.txt
 
 1. Now get down to making the plugin do what you want.  See the FAQ

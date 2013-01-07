@@ -2,7 +2,7 @@
 
 /**
  * The user interface and activation/deactivation methods for administering
- * the Object Oriented Plugin Template Solution plugin
+ * the CFS Super Plugin plugin
  *
  * This plugin abstracts WordPress' Settings API to simplify the creation of
  * a settings admin interface.  Read the docblocks for the set_sections() and
@@ -19,17 +19,17 @@
  * Network Admin panel.  If you want your plugin to be configurable for each
  * site in a multisite network, you must do the following:
  *
- * + Search admin.php and oop-plugin-template-solution.php
+ * + Search admin.php and cfs-plugin.php
  *   for is_multisite() if statements.  Remove the true parts and leave
  *   the false parts.
- * + In oop-plugin-template-solution.php, go to the initialize() method
+ * + In cfs-plugin.php, go to the initialize() method
  *   and remove the $wpdb->get_blog_prefix(0) portion of the
  *   $this->table_login assignment.
  *
  * Beyond that, you're advised to leave the rest of this file alone.
  *
- * @package oop-plugin-template-solution
- * @link http://wordpress.org/extend/plugins/oop-plugin-template-solution/
+ * @package cfs-plugin
+ * @link http://wordpress.org/extend/plugins/cfs-plugin/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
@@ -40,10 +40,10 @@
 
 /**
  * The user interface and activation/deactivation methods for administering
- * the Object Oriented Plugin Template Solution plugin
+ * the CFS Super Plugin plugin
  *
- * @package oop-plugin-template-solution
- * @link http://wordpress.org/extend/plugins/oop-plugin-template-solution/
+ * @package cfs-plugin
+ * @link http://wordpress.org/extend/plugins/cfs-plugin/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
@@ -51,7 +51,7 @@
  * This plugin used the Object-Oriented Plugin Template Solution as a skeleton
  * REPLACE_PLUGIN_URI
  */
-class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
+class cfsplugin_admin extends cfsplugin {
 	/**
 	 * The WP privilege level required to use the admin interface
 	 * @var string
@@ -94,11 +94,11 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 *
 	 * @return void
 	 *
-	 * @uses oop_plugin_template_solution::initialize()  to set the object's
+	 * @uses cfsplugin::initialize()  to set the object's
 	 *	     properties
-	 * @uses oop_plugin_template_solution_admin::set_sections()  to populate the
+	 * @uses cfsplugin_admin::set_sections()  to populate the
 	 *       $sections property
-	 * @uses oop_plugin_template_solution_admin::set_fields()  to populate the
+	 * @uses cfsplugin_admin::set_fields()  to populate the
 	 *       $fields property
 	 */
 	public function __construct() {
@@ -223,7 +223,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 *   method named "section_<sid>()".
 	 *
 	 * @return void
-	 * @uses oop_plugin_template_solution_admin::$sections  to hold the data
+	 * @uses cfsplugin_admin::$sections  to hold the data
 	 */
 	protected function set_sections() {
 		$this->sections = array(
@@ -257,11 +257,11 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 * + bool1:  description for the button indicating the option is on
 	 *
 	 * WARNING:  Make sure to keep this propety and the
-	 * oop_plugin_template_solution_admin::$options_default
+	 * cfsplugin_admin::$options_default
 	 * property in sync.
 	 *
 	 * @return void
-	 * @uses oop_plugin_template_solution_admin::$fields  to hold the data
+	 * @uses cfsplugin_admin::$fields  to hold the data
 	 */
 	protected function set_fields() {
 		$this->fields = array(
@@ -321,14 +321,16 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 * any admin page is rendered
 	 */
 	public function admin_menu() {
-		add_submenu_page(
-			$this->page_options,
-			$this->text_settings,
-			self::NAME,
-			$this->capability_required,
-			self::ID,
-			array(&$this, 'page_settings')
-		);
+		// add_submenu_page(
+		// 	$this->page_options,
+		// 	$this->text_settings,
+		// 	self::NAME,
+		// 	$this->capability_required,
+		// 	self::ID,
+		// 	array(&$this, 'page_settings')
+		// );
+		
+		add_menu_page( __('CFS Settingsdd'), __('CFS Plugin'), $this->capability_required, self::ID, array(&$this, 'page_settings'));  
 	}
 
 	/**
@@ -379,7 +381,11 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 			include_once ABSPATH . 'wp-admin/options-head.php';
 		}
 
-		echo '<h2>' . $this->hsc_utf8($this->text_settings) . '</h2>';
+		?>
+
+		<?php
+
+		echo '<div id="icon-options-general" class="icon32"></div><h2>' . $this->hsc_utf8($this->text_settings) . '</h2>';
 		echo '<form action="' . $this->hsc_utf8($this->form_action) . '" method="post">' . "\n";
 		settings_fields($this->option_name);
 		do_settings_sections(self::ID);
@@ -408,11 +414,11 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 * The callback for rendering the fields
 	 * @return void
 	 *
-	 * @uses oop_plugin_template_solution_admin::input_int()  for rendering
+	 * @uses cfsplugin_admin::input_int()  for rendering
 	 *       text input boxes for numbers
-	 * @uses oop_plugin_template_solution_admin::input_radio()  for rendering
+	 * @uses cfsplugin_admin::input_radio()  for rendering
 	 *       radio buttons
-	 * @uses oop_plugin_template_solution_admin::input_string()  for rendering
+	 * @uses cfsplugin_admin::input_string()  for rendering
 	 *       text input boxes for strings
 	 */
 	public function __call($name, $params) {

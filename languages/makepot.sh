@@ -17,7 +17,7 @@ if [[ $1 == "-h" || $1 == "--help" ]] ; then
 	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "License: http://www.gnu.org/licenses/gpl-2.0.html"
-	echo "http://wordpress.org/extend/plugins/oop-plugin-template-solution/"
+	echo "http://wordpress.org/extend/plugins/cfs-plugin/"
 	exit 1
 fi
 
@@ -32,5 +32,5 @@ svn up
 
 php -d 'error_reporting=E_ALL^E_STRICT' \
 	makepot.php wp-plugin \
-	../oop-plugin-template-solution \
-	../oop-plugin-template-solution/languages/oop-plugin-template-solution.pot
+	../cfs-plugin \
+	../cfs-plugin/languages/cfs-plugin.pot

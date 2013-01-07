@@ -3,7 +3,7 @@
 /**
  * Test login functionality
  *
- * @package oop-plugin-template-solution
+ * @package cfs-plugin
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
@@ -21,7 +21,7 @@ require_once dirname(__FILE__) .  '/TestCase.php';
 /**
  * Test login functionality
  *
- * @package oop-plugin-template-solution
+ * @package cfs-plugin
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
