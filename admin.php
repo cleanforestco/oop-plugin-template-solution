@@ -391,6 +391,43 @@ class cfsplugin_admin extends cfsplugin {
 		do_settings_sections(self::ID);
 		submit_button();
 		echo '</form>';
+		?>
+
+		<table class="widefat">
+<thead>
+    <tr>
+        <th>RegId</th>
+        <th>Name</th>       
+        <th>Email</th>
+    </tr>
+</thead>
+<tfoot>
+    <tr>
+    <th>RegId</th>
+    <th>Name</th>
+    <th>Email</th>
+    </tr>
+</tfoot>
+<tbody>
+   <tr>
+     <td><?php echo ("placeholder") ?></td>
+     <td><?php echo ("placeholder")?></td>
+     <td><?php echo ("placeholder") ?></td>
+   </tr>
+   <tr>
+     <td><?php echo ("placeholder") ?></td>
+     <td><?php echo ("placeholder")?></td>
+     <td><?php echo ("placeholder") ?></td>
+   </tr>
+   <tr>
+     <td><?php echo ("placeholder") ?></td>
+     <td><?php echo ("placeholder")?></td>
+     <td><?php echo ("placeholder") ?></td>
+   </tr>
+</tbody>
+</table>
+
+<?php
 	}
 
 	/**
