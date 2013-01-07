@@ -53,7 +53,7 @@ If you want an explanation of how this "plugin" works, please see the
 == Installation ==
 
 1. Download the zip file from WordPress' plugin
-    site: `http://wordpress.org/extend/plugins/cfs-plugin/`
+    site: `http://wordpress.org/extend/plugins/oop-plugin-template-solution/`
 
 1. Unzip the file
 
@@ -87,7 +87,7 @@ If you want an explanation of how this "plugin" works, please see the
         find . -type f -exec sed "s/$old_class/$new_class/g" -i {} \;
         find . -type f -exec sed "s/$old_name/$new_name/g" -i {} \;
         find . -type f -exec sed -E "s/^ \* (Author:|Author URI:|@author|@copyright) (.*)$/ * \1/g" -i {} \;
-        find . -type f -exec sed "s@REPLACE_PLUGIN_URI@http://wordpress.org/extend/plugins/cfs-plugin/@g" -i {} \;
+        find . -type f -exec sed "s@REPLACE_PLUGIN_URI@http://wordpress.org/extend/plugins/oop-plugin-template-solution/@g" -i {} \;
         sed -E "s/^(Contributors|Donate link|Tags): (.*)$/\1:/g" -i readme.txt
 
 1. Now get down to making the plugin do what you want.  See the FAQ

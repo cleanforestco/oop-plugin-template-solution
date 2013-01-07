@@ -29,7 +29,7 @@
  * Beyond that, you're advised to leave the rest of this file alone.
  *
  * @package cfs-plugin
- * @link http://wordpress.org/extend/plugins/cfs-plugin/
+ * @link http://wordpress.org/extend/plugins/oop-plugin-template-solution/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
@@ -43,7 +43,7 @@
  * the CFS Super Plugin plugin
  *
  * @package cfs-plugin
- * @link http://wordpress.org/extend/plugins/cfs-plugin/
+ * @link http://wordpress.org/extend/plugins/oop-plugin-template-solution/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012

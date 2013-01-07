@@ -7,7 +7,7 @@
  * object-oriented programming practices.
  *
  * Plugin URI: https://github.com/cleanforestco/cfs-plugin
- * Props: http://wordpress.org/extend/plugins/cfs-plugin/
+ * Props: http://wordpress.org/extend/plugins/oop-plugin-template-solution/
  * Version: 1.1.0
  *         (Remember to change the VERSION constant, below, as well!)
  * Author: Daniel Convissor
@@ -28,7 +28,7 @@ $GLOBALS['cfsplugin'] = new cfsplugin;
  * CFS Super Plugin
  *
  * @package cfs-plugin
- * @link http://wordpress.org/extend/plugins/cfs-plugin/
+ * @link http://wordpress.org/extend/plugins/oop-plugin-template-solution/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2
  * @author Daniel Convissor <danielc@analysisandsolutions.com>
  * @copyright The Analysis and Solutions Company, 2012
