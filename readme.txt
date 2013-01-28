@@ -1,6 +1,5 @@
 === CFS Plugin ===
 Contributors: convissor
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=danielc%40analysisandsolutions%2ecom&lc=US&item_name=Donate%3a%20Object%20Oriented%20Plugin%20Template%20Solution&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: plugin, template, skeleton, object oriented, settings api, multisite, i18n, translation, phpunit
 Requires at least: 3.3
 Tested up to: 3.5beta1
